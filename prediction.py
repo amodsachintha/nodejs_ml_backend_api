@@ -14,7 +14,7 @@ args = vars(ap.parse_args())
 
 model = load_model(r'/home/ubuntu/docs/nethravi-codes/data/model.hdf5')
 df = pd.read_csv(r'/home/ubuntu/docs/nethravi-codes/data/data2.csv')
-savefile = r'/home/ubuntu/docs/nethravi-codes/data/results.json'
+savefile = r'/home/ubuntu/docs/nethravi-codes/nodejs_ml_backend_api/resJson.json'
 
 month = df["Month"].tolist()
 monthBinarizer = LabelBinarizer().fit(month)
@@ -49,7 +49,7 @@ my_details = {
 
 with open(savefile, 'w') as json_file:
     json.dump(my_details, json_file)
-    savefile = r'/home/ubuntu/docs/nethravi-codes/data/results.json'
+    savefile = r'/home/ubuntu/docs/nethravi-codes/nodejs_ml_backend_api/resJson.json'
 
 month = df["Month"].tolist()
 monthBinarizer = LabelBinarizer().fit(month)
