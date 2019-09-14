@@ -85,6 +85,7 @@ app.post('/predict', (req, res) => {
 });
 
 app.get('/history', (req, res) => {
+    console.log(`Got request`);
     getPredictionHistory().then(result => {
         res.status(200).json({
             code: 200,
@@ -102,7 +103,7 @@ app.get('/history', (req, res) => {
 initDB().then(() => {
     console.log(`initDB: Success`);
     app.listen(3000, () => {
-        console.log(`Listening on port 2222`);
+        console.log(`Listening on port 3000`);
     });
 }).catch(e => {
     console.log(`initDB: Fail\n ${e}`);
