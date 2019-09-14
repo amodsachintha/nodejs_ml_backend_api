@@ -43,7 +43,7 @@ app.post('/predict', (req, res) => {
         province = req.body.province;
 
     let execPromise = new Promise((resolve, reject) => {
-        const execPred = spawn('python', ['prediction.py', `--d ${day.value}`, `--m ${month.value}`, `--p ${province.value}`]);
+        const execPred = spawn('python', ['prediction.py', '--d', day.value, '--m', month.value, '--p' province.value]);
         // const execPred = spawn('dir');
         execPred.stdout.on('data', data => {
             // console.log(`stdout: ${data}`);
