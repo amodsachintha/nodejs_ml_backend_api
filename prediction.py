@@ -34,11 +34,11 @@ print(args["d"], args["m"], args["p"])
 val = None
 out = None
 if (p[0][0] > p[0][1]):
-    out = 'Kidnapping,Rape,Assault,Accident - '
-    val = str(p[0][0]) + "%"
+    out = 'Kidnapping, Rape, Assault, Accident'
+    val = str(p[0][0])
 else:
-    out = 'Murder,Robbery, Drug Dealing - '
-    val = str(p[0][1]) + "%"
+    out = 'Murder, Robbery, Drug Dealing'
+    val = str(p[0][1])
 
 print("Result - ", out)
 
