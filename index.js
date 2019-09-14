@@ -55,7 +55,7 @@ app.post('/predict', (req, res) => {
             console.log(`Child Process exited with code ${code}`);
             const resJson = require('./resJson');
             if (code === 0) {
-                insertPredictionResult(resJson.class, resJson.accuracy, day.text, month.text, province.text);
+                insertPredictionResult(resJson.class, resJson.accuracy*100, day.text, month.text, province.text);
                 resolve({
                     class: resJson.class,
                     accuracy: resJson.accuracy
