@@ -58,7 +58,7 @@ app.post('/predict', (req, res) => {
                 insertPredictionResult(resJson.class, resJson.accuracy*100, day.text, month.text, province.text);
                 resolve({
                     class: resJson.class,
-                    accuracy: resJson.accuracy
+                    accuracy: resJson.accuracy*100
                 });
             } else {
                 reject({
