@@ -101,7 +101,7 @@ app.get('/history', (req, res) => {
 
 initDB().then(() => {
     console.log(`initDB: Success`);
-    app.listen(2222, () => {
+    app.listen(3000, () => {
         console.log(`Listening on port 2222`);
     });
 }).catch(e => {
